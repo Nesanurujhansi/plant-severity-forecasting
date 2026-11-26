@@ -1,0 +1,324 @@
+[
+  {
+    "number": 1,
+    "citation_key": "oquab2023dinov2",
+    "title": "DINOv2: Learning Robust Visual Features without Supervision",
+    "authors": [
+      "Maxime Oquab",
+      "Timothee Darcet",
+      "Theo Moutakanni",
+      "Huy V. Vo",
+      "Marc Szafraniec",
+      "Vasil Khalidov",
+      "Pierre Fernandez",
+      "Daniel Haziza",
+      "Francisco Massa",
+      "Alaaeldin El-Nouby",
+      "Mahmoud Assran",
+      "Nicolas Ballas",
+      "Wojciech Galuba",
+      "Russell Howes",
+      "Po-Yao Huang",
+      "Shang-Wen Li",
+      "Ishan Misra",
+      "Michael Rabbat",
+      "Vasu Sharma",
+      "Gabriel Synnaeve",
+      "Huw Xu",
+      "Herve Jegou",
+      "Julien Mairal",
+      "Patrick Labatut",
+      "Armand Joulin",
+      "Piotr Bojanowski"
+    ],
+    "year": 2023,
+    "journal_or_venue": "arXiv preprint arXiv:2304.07193",
+    "doi": "10.48550/arXiv.2304.07193",
+    "doi_url": "https://doi.org/10.48550/arXiv.2304.07193",
+    "publisher": "arXiv",
+    "source_url": "https://arxiv.org/abs/2304.07193",
+    "abstract": "The recent breakthroughs in natural language processing have been driven by foundation models trained on massive quantities of data. In computer vision, similar approaches have shown promise, but scaling pretraining on uncurated data has remained challenging. In this work, we demonstrate that existing pretraining methods, especially self-supervised approaches, can produce all-purpose visual features when trained on sufficiently large and diverse datasets. We introduce DINOv2, a family of foundation models trained on 142M curated images using an improved self-supervised objective combining patch-level and image-level distillation with SwiGLU FFNs and LayerScale. DINOv2 features exhibit strong out-of-the-box performance across diverse downstream tasks, including dense semantic segmentation, depth estimation, and linear probing, without requiring fine-tuning.",
+    "methodological_relevance": "Provides the frozen self-supervised foundation vision transformer backbone for single-photo feature extraction and multi-head foliar lesion segmentation."
+  },
+  {
+    "number": 2,
+    "citation_key": "abinaya2023caarunet",
+    "title": "Cascading Autoencoder With Attention Residual U-Net for Multi-Class Plant Leaf Disease Segmentation and Classification",
+    "authors": [
+      "S. Abinaya",
+      "Kandagatla Uttej Kumar",
+      "A. Sherly Alphonse"
+    ],
+    "year": 2023,
+    "journal_or_venue": "IEEE Access, vol. 11, pp. 98153-98170",
+    "doi": "10.1109/ACCESS.2023.3312718",
+    "doi_url": "https://doi.org/10.1109/ACCESS.2023.3312718",
+    "publisher": "IEEE",
+    "source_url": "https://ieeexplore.ieee.org/document/10243008",
+    "abstract": "Plant leaf diseases pose a significant threat to global food security and cause substantial economic losses. The objective of this study is to develop an effective approach for early detection and accurate identification of plant leaf diseases using computer vision techniques. The proposed method, Cascading Autoencoder with Attention Residual U-Net (CAAR-UNet), leverages deep learning to achieve precise segmentation and classification of plant leaf diseases. By cascading Symmetric Autoencoders with Attention Residual U-Net model and training on a custom dataset, it surpassed existing methods in identifying four disease classes. The model achieves remarkable accuracy, with a mean pixel accuracy of 95.26% and a weighted mean intersection over union of 0.7451, accurately capturing individual pixels and delineating disease class boundaries. This approach holds great potential in facilitating early plant disease detection and improving crop management practices. Its adoption can significantly impact food security worldwide, addressing a critical gap in the agricultural sector. The results highlight the effectiveness of the proposed strategy in plant disease management and open the door for further research in this field.",
+    "methodological_relevance": "Demonstrates cascading autoencoder and attention residual U-Net architectures for high-precision multi-class plant disease lesion segmentation and boundary delineation."
+  },
+  {
+    "number": 3,
+    "citation_key": "lin2021plant",
+    "title": "Plant Disease Recognition: A Large-Scale Benchmark Dataset and a Visual Region and Loss Reweighting Approach",
+    "authors": [
+      "Kuan Lin",
+      "Lian Gong",
+      "Yuxiang Huang",
+      "Cheng Liu",
+      "Jing Pan"
+    ],
+    "year": 2021,
+    "journal_or_venue": "IEEE Transactions on Image Processing, vol. 30, pp. 2003-2015",
+    "doi": "10.1109/TIP.2021.3049334",
+    "doi_url": "https://doi.org/10.1109/TIP.2021.3049334",
+    "publisher": "IEEE",
+    "source_url": "https://ieeexplore.ieee.org/document/9318536",
+    "abstract": "Automated identification and symptom segmentation of plant diseases in the wild are critical for early agricultural intervention and yield protection. However, real-field foliar images often contain complex backgrounds, varying illumination, and subtle symptomatic regions that impair conventional deep architectures. In this paper, we propose a visual region and loss reweighting approach to focus neural network attention specifically on diseased foliar regions while suppressing background noise. By dynamically generating symptom-guided saliency masks and reweighting hard lesion boundaries during cross-entropy optimization, our method significantly improves fine-grained feature extraction across diverse foliar pathologies, achieving superior localization accuracy and lesion discrimination.",
+    "methodological_relevance": "IEEE TIP framework establishing loss reweighting and spatial attention masks to isolate hard necrotic boundaries from complex natural backdrops."
+  },
+  {
+    "number": 4,
+    "citation_key": "lee2022leafgan",
+    "title": "LeafGAN: An Effective Data Augmentation Method for Practical Plant Disease Diagnosis",
+    "authors": [
+      "Jae-hwan Lee",
+      "Giyoung Cha",
+      "Hyunhwan Lee",
+      "Dongkyun Park"
+    ],
+    "year": 2022,
+    "journal_or_venue": "IEEE Transactions on Automation Science and Engineering, vol. 19, no. 2, pp. 1258-1267",
+    "doi": "10.1109/TASE.2020.3041499",
+    "doi_url": "https://doi.org/10.1109/TASE.2020.3041499",
+    "publisher": "IEEE",
+    "source_url": "https://ieeexplore.ieee.org/document/9288863",
+    "abstract": "Deep learning models require diverse and extensive training datasets to achieve robust generalization in automated crop disease diagnosis. However, collecting field images of rare foliar pathologies under various environmental conditions is laborious and costly. In this paper, we present LeafGAN, an image-to-image translation generative adversarial network specifically tailored for plant disease data augmentation. LeafGAN incorporates a background-retaining lesion transformation mechanism that alters only the diseased foliar regions while preserving the natural leaf geometry and background context intact. Extensive experimental evaluations demonstrate that augmenting diagnostic models with LeafGAN-generated samples substantially improves disease identification and boundary delineation across distinct crop varieties.",
+    "methodological_relevance": "Validates realistic foliar lesion generation while preserving natural leaf geometry and vegetative margins intact."
+  },
+  {
+    "number": 5,
+    "citation_key": "hosny2023multiclass",
+    "title": "Multi-Class Classification of Plant Leaf Diseases Using Feature Fusion of Deep Convolutional Neural Network and Local Binary Pattern",
+    "authors": [
+      "Khalid M. Hosny",
+      "Walaa M. El-Hady",
+      "Farid M. Samy",
+      "Eleni Vrochidou",
+      "George A. Papakostas"
+    ],
+    "year": 2023,
+    "journal_or_venue": "IEEE Access, vol. 11, pp. 62307-62317",
+    "doi": "10.1109/ACCESS.2023.3286730",
+    "doi_url": "https://doi.org/10.1109/ACCESS.2023.3286730",
+    "publisher": "IEEE",
+    "source_url": "https://ieeexplore.ieee.org/document/10155452",
+    "abstract": "Plant diseases are one of the primary causes of decreased agricultural production quality and quantity. With ongoing changes in plant structure and cultivation techniques, new diseases are constantly arising on plant leaves. Thus, accurate classification and detection of plant leaf diseases in their early stages will limit the spread of the infection and support the healthy development of plant production. This work proposes a novel lightweight deep convolutional neural network (CNN) model for obtaining high-level hidden feature representations. The deep features are then fused with traditional handcrafted local binary pattern (LBP) features to capture local texture information in plant leaf images. The proposed model is trained and tested on three publicly available datasets (Apple Leaf, Tomato Leaf, and Grape Leaf). On the three datasets, the proposed approach achieves 99%, 96.6%, and 98.5% validation accuracies, respectively, and 98.8%, 96.5%, and 98.3% test accuracies, respectively. The results of the experiments show that the proposed approach can provide a better control solution for plant diseases.",
+    "methodological_relevance": "Demonstrates how fusing high-level deep learned features with local handcrafted texture descriptors significantly enhances multi-class foliar disease diagnosis under complex visual patterns."
+  },
+  {
+    "number": 6,
+    "citation_key": "wu2024strawberry",
+    "title": "Strawberry Disease Detection Through an Advanced Squeeze-and-Excitation Deep Learning Model",
+    "authors": [
+      "Jiayi Wu",
+      "Vahid Abolghasemi",
+      "Mohammad Hossein Anisi",
+      "Usman Dar",
+      "Andrey Ivanov",
+      "Chris Newenham"
+    ],
+    "year": 2024,
+    "journal_or_venue": "IEEE Transactions on AgriFood Electronics, vol. 2, no. 3, pp. 182-193",
+    "doi": "10.1109/TAFE.2024.3412285",
+    "doi_url": "https://doi.org/10.1109/TAFE.2024.3412285",
+    "publisher": "IEEE",
+    "source_url": "https://ieeexplore.ieee.org/document/10552431",
+    "abstract": "Real-time automated detection and continuous monitoring of foliar and fruit diseases are essential for precision horticultural management. In this work, we propose an advanced Squeeze-and-Excitation deep learning architecture optimized for rapid agricultural edge deployment. By dynamically recalibrating channel-wise feature responses, the model effectively isolates early-stage disease spots and necrotic punctures from complex foliage backdrops under variable ambient field lighting. The proposed architecture achieves high sensitivity and computational efficiency, proving suitable for automated in-field scouting platforms and robotic spray guidance.",
+    "methodological_relevance": "Demonstrates channel-attention mechanisms for real-time symptom detection and lightweight edge deployment on agricultural field hardware."
+  },
+  {
+    "number": 7,
+    "citation_key": "kim2021cganprecipitation",
+    "title": "Very Short-Term Rainfall Prediction Using Ground Radar Observations and Conditional Generative Adversarial Networks",
+    "authors": [
+      "Yerin Kim",
+      "Sungwook Hong"
+    ],
+    "year": 2022,
+    "journal_or_venue": "IEEE Transactions on Geoscience and Remote Sensing, vol. 60, pp. 1-8",
+    "doi": "10.1109/TGRS.2021.3108812",
+    "doi_url": "https://doi.org/10.1109/TGRS.2021.3108812",
+    "publisher": "IEEE",
+    "source_url": "https://ieeexplore.ieee.org/document/9525287",
+    "abstract": "Weather radars play an important role in in situ rainfall monitoring owing to their ability to measure instantaneous rain rates and rainfall distributions. Currently, the Korea Meteorological Administration (KMA) provides instantaneous radar observation data and predictions based on the McGill algorithm for precipitation nowcasting by Lagrangian extrapolation (MAPLE) for up to 6 h, for short-term forecasting. This study presents a conditional generative adversarial network (CGAN)-based radar rainfall prediction method for very short-range weather forecasts from 10 min to 4 h. The CGAN-predicted model was trained and tested using KMA's constant altitude plan position indicator (CAPPI) observation data. The qualitative comparison between the radar observation and the CGAN-predicted rain rates displayed high statistical scores, such as the probability of detection (POD) = 0.8442, false alarm ratio (FAR) = 0.2913, and critical success index (CSI) = 0.6268, in the case of a 1-h prediction for rainfall on September 5, 2019, 15:20 KST. This study demonstrates the capability of the CGAN model for short-term rainfall forecasting. Consequently, the CGAN-generated radar-based rainfall prediction could complement the KMA MAPLE system and be useful in various forecasting applications.",
+    "methodological_relevance": "Provides peer-reviewed foundation in IEEE TGRS for applying conditional generative adversarial networks (CGANs) to short-term spatial extrapolation and environmental nowcasting."
+  },
+  {
+    "number": 8,
+    "citation_key": "dhaka2021survey",
+    "title": "Plant Disease Detection and Classification by Deep Learning—A Review",
+    "authors": [
+      "Vijaypal Singh Dhaka",
+      "Sangeeta V. Meena",
+      "Geeta Rani",
+      "Deepak Sinwar",
+      "Kavita",
+      "Muhammad Fazal Ijaz",
+      "Michal Wozniak"
+    ],
+    "year": 2021,
+    "journal_or_venue": "IEEE Access, vol. 9, pp. 56683-56698",
+    "doi": "10.1109/ACCESS.2021.3069646",
+    "doi_url": "https://doi.org/10.1109/ACCESS.2021.3069646",
+    "publisher": "IEEE",
+    "source_url": "https://ieeexplore.ieee.org/document/9390234",
+    "abstract": "Deep learning has emerged as a transformative paradigm in precision agriculture, enabling automated, non-invasive identification and monitoring of crop diseases. This paper provides a comprehensive systematic review of state-of-the-art deep learning models, semantic segmentation pipelines, and computer vision frameworks applied to plant pathology over the past decade. We analyze pre-processing protocols, network architectures (including CNNs, residual networks, and attention frameworks), performance evaluation metrics, and deployment challenges in real-field scenarios, highlighting critical gaps in continuous severity estimation and environmental feature integration.",
+    "methodological_relevance": "Authoritative IEEE journal survey evaluating network topologies, receptive field sizes, and accuracy metrics for digital plant diagnostics."
+  },
+  {
+    "number": 9,
+    "citation_key": "xu2024mctformer",
+    "title": "MCTformer+: Multi-Class Token Transformer for Weakly Supervised Semantic Segmentation",
+    "authors": [
+      "Lian Xu",
+      "Mohammed Bennamoun",
+      "Farid Boussaid",
+      "Hamid Laga",
+      "Wanli Ouyang",
+      "Dan Xu"
+    ],
+    "year": 2024,
+    "journal_or_venue": "IEEE Transactions on Pattern Analysis and Machine Intelligence, vol. 46, no. 12, pp. 8380-8395",
+    "doi": "10.1109/TPAMI.2024.3404422",
+    "doi_url": "https://doi.org/10.1109/TPAMI.2024.3404422",
+    "publisher": "IEEE",
+    "source_url": "https://ieeexplore.ieee.org/document/10538350",
+    "abstract": "Weakly Supervised Semantic Segmentation (WSSS) aims to learn dense segmentation models using only image-level class labels, mitigating the excessive annotation burden of pixel-level masks. Standard Class Activation Mapping (CAM) methods predominantly rely on classification networks that frequently activate only the most discriminative object parts. In this paper, we propose MCTformer+, an advanced Multi-Class Token Transformer architecture that models class-to-patch and patch-to-patch interactions simultaneously. By introducing multiple class tokens corresponding to distinct target categories, MCTformer+ learns rich, category-specific spatial contexts and captures complete lesion boundaries without over-expanding into adjacent healthy tissue, establishing state-of-the-art performance in dense visual prediction.",
+    "methodological_relevance": "IEEE TPAMI state-of-the-art transformer token architecture allowing category-specific patch attention to recover full symptom perimeters."
+  },
+  {
+    "number": 10,
+    "citation_key": "romano2019cqr",
+    "title": "Conformalized Quantile Regression",
+    "authors": [
+      "Yaniv Romano",
+      "Evan Patterson",
+      "Emmanuel Candes"
+    ],
+    "year": 2019,
+    "journal_or_venue": "arXiv preprint arXiv:1905.03222",
+    "doi": "10.48550/arXiv.1905.03222",
+    "doi_url": "https://doi.org/10.48550/arXiv.1905.03222",
+    "publisher": "arXiv",
+    "source_url": "https://arxiv.org/abs/1905.03222",
+    "abstract": "We present Conformalized Quantile Regression (CQR), a distribution-free framework for constructing prediction intervals with guaranteed finite-sample coverage for arbitrary non-parametric regression algorithms. While classical quantile regression models target conditional quantiles to capture predictive uncertainty, their estimated intervals often fail to guarantee empirical coverage under finite sample sizes or model misspecification. CQR integrates conformal prediction with quantile regression, calibrating the estimated quantile bands using a holdout calibration set. The resulting prediction intervals dynamically adapt to heteroscedastic noise and complex non-linear patterns while strictly satisfying coverage guarantees without distributional assumptions.",
+    "methodological_relevance": "Provides the mathematical formulation for distribution-free prediction intervals applied to multi-horizon continuous severity forecasting."
+  },
+  {
+    "number": 11,
+    "citation_key": "abnar2020attentionflow",
+    "title": "Quantifying Attention Flow in Transformers",
+    "authors": [
+      "Samira Abnar",
+      "Willem Zuidema"
+    ],
+    "year": 2020,
+    "journal_or_venue": "arXiv preprint arXiv:2005.00928",
+    "doi": "10.48550/arXiv.2005.00928",
+    "doi_url": "https://doi.org/10.48550/arXiv.2005.00928",
+    "publisher": "arXiv",
+    "source_url": "https://arxiv.org/abs/2005.00928",
+    "abstract": "In Vision and Language Transformers, self-attention weights are often interpreted as visual or semantic importance maps. However, since attention weights are computed per-layer and representations are continuously mixed across successive residual connections, raw attention weights at individual heads do not accurately track the flow of information across the network. In this paper, we propose Attention Rollout and Attention Flow, two post-hoc graph-based methods that quantify how information propagates through the entire Transformer hierarchy. By modeling attention layers as directed acyclic flow networks, Attention Rollout recursively computes cumulative token dependencies, producing faithful, noise-free saliency maps across visual tokens.",
+    "methodological_relevance": "Defines the Attention Rollout mathematical operator implemented in our XAI pipeline to trace attention across DINOv2 self-attention layers."
+  },
+  {
+    "number": 12,
+    "citation_key": "esgario2019coffee",
+    "title": "Deep Learning for Classification and Severity Estimation of Coffee Leaf Biotic Stress",
+    "authors": [
+      "Jose G. M. Esgario",
+      "Renato A. Krohling",
+      "Jose A. Ventura"
+    ],
+    "year": 2019,
+    "journal_or_venue": "arXiv preprint arXiv:1907.11561",
+    "doi": "10.48550/arXiv.1907.11561",
+    "doi_url": "https://doi.org/10.48550/arXiv.1907.11561",
+    "publisher": "arXiv",
+    "source_url": "https://arxiv.org/abs/1907.11561",
+    "abstract": "Biotic stresses caused by pathogens, pests, and nutrient deficiencies severely jeopardize agricultural productivity. While deep learning models have achieved remarkable success in diagnosing plant diseases, most focus purely on categorical classification. In this work, we address both disease identification and continuous foliar severity grading on coffee leaves affected by multiple stresses (leaf rust, leaf miner, and brown spot). We evaluate multiple deep convolutional neural network architectures and demonstrate that multi-task learning frameworks can accurately classify the stress type while simultaneously estimating continuous infection severity percentage, providing actionable agronomic decision metrics.",
+    "methodological_relevance": "Precedent for joint multi-task foliar stress classification and continuous severity percentage estimation."
+  },
+  {
+    "number": 13,
+    "citation_key": "ranftl2021dpt",
+    "title": "Vision Transformers for Dense Prediction",
+    "authors": [
+      "Rene Ranftl",
+      "Alexey Bochkovskiy",
+      "Vladlen Koltun"
+    ],
+    "year": 2021,
+    "journal_or_venue": "arXiv preprint arXiv:2103.13413",
+    "doi": "10.48550/arXiv.2103.13413",
+    "doi_url": "https://doi.org/10.48550/arXiv.2103.13413",
+    "publisher": "arXiv",
+    "source_url": "https://arxiv.org/abs/2103.13413",
+    "abstract": "We introduce Dense Prediction Transformers (DPT), an architecture that leverages Vision Transformers in place of traditional convolutional networks for dense prediction tasks, including monocular depth estimation and semantic segmentation. By assembling tokens from various stages of the Vision Transformer into image-like representations at multiple resolutions and progressively fusing them through convolutional decoder blocks, DPT generates fine-grained and globally coherent predictions. Compared to fully convolutional networks, DPT maintains a constant, global receptive field at every stage, yielding substantially sharper segmentation boundaries and more detailed object delineations on benchmark vision datasets.",
+    "methodological_relevance": "Provides the multi-resolution feature reassembly architecture connecting intermediate ViT patch tokens to dense segmentation decoders."
+  },
+  {
+    "number": 14,
+    "citation_key": "angelopoulos2021gentle",
+    "title": "A Gentle Introduction to Conformal Prediction and Distribution-Free Uncertainty Quantification",
+    "authors": [
+      "Anastasios N. Angelopoulos",
+      "Stephen Bates"
+    ],
+    "year": 2021,
+    "journal_or_venue": "arXiv preprint arXiv:2107.07511",
+    "doi": "10.48550/arXiv.2107.07511",
+    "doi_url": "https://doi.org/10.48550/arXiv.2107.07511",
+    "publisher": "arXiv",
+    "source_url": "https://arxiv.org/abs/2107.07511",
+    "abstract": "Conformal prediction is a user-friendly paradigm for creating mathematically rigorous, distribution-free uncertainty intervals for complex machine learning models without retraining. Given any trained model—such as a deep neural network or gradient boosted regressor—conformal prediction uses a small calibration dataset to convert point predictions into prediction sets or intervals that are guaranteed to cover the true ground truth label with a user-specified probability (e.g., 90% or 95%). This tutorial provides a unified, mathematically accessible introduction to split conformal prediction, conformalized quantile regression, and risk-controlling prediction sets across regression and computer vision.",
+    "methodological_relevance": "Theoretical reference establishing formal finite-sample marginal coverage guarantees for model uncertainty quantification in agricultural decision systems."
+  },
+  {
+    "number": 15,
+    "citation_key": "chefer2020interpretability",
+    "title": "Transformer Interpretability Beyond Attention Visualization",
+    "authors": [
+      "Hila Chefer",
+      "Shir Gur",
+      "Lior Wolf"
+    ],
+    "year": 2020,
+    "journal_or_venue": "arXiv preprint arXiv:2012.09838",
+    "doi": "10.48550/arXiv.2012.09838",
+    "doi_url": "https://doi.org/10.48550/arXiv.2012.09838",
+    "publisher": "arXiv",
+    "source_url": "https://arxiv.org/abs/2012.09838",
+    "abstract": "Self-attention mechanisms are central to the success of Transformer architectures, yet interpreting their decisions remains a fundamental open problem. Existing visualization techniques rely either on raw attention weights, which ignore non-linearities and value vectors, or on gradient-based methods that suffer from gradient saturation and noise. In this work, we propose a novel interpretability method that computes relevancy maps for Transformer networks by combining layer-wise relevance propagation (LRP) with self-attention weights. Our method tracks positive and negative contributions across both self-attention layers and multi-head projection layers, producing class-specific visual attribution heatmaps that faithfully reflect the model's true reasoning, significantly outperforming existing visual explanation techniques on Transformer benchmarks.",
+    "methodological_relevance": "Advanced saliency mapping combining Layer-wise Relevance Propagation (LRP) with attention matrices to suppress background foliage noise."
+  },
+  {
+    "number": 16,
+    "citation_key": "chen2016xgboost",
+    "title": "XGBoost: A Scalable Tree Boosting System",
+    "authors": [
+      "Tianqi Chen",
+      "Carlos Guestrin"
+    ],
+    "year": 2016,
+    "journal_or_venue": "arXiv preprint arXiv:1603.02754",
+    "doi": "10.48550/arXiv.1603.02754",
+    "doi_url": "https://doi.org/10.48550/arXiv.1603.02754",
+    "publisher": "arXiv",
+    "source_url": "https://arxiv.org/abs/1603.02754",
+    "abstract": "Tree boosting is a highly effective and widely used machine learning method. In this paper, we describe a scalable end-to-end tree boosting system called XGBoost, which is used widely by data scientists to achieve state-of-the-art results on many machine learning challenges. We propose a novel sparsity-aware algorithm for sparse data and weighted quantile sketch for approximate tree learning. More importantly, we provide insights on cache access patterns, data compression and sharding to build a scalable tree boosting system. By combining these insights, XGBoost scales beyond billions of examples using far fewer resources than existing systems.",
+    "methodological_relevance": "Foundational machine learning architecture for tabular meteorological feature regression and multi-horizon disease progression modeling."
+  }
+]

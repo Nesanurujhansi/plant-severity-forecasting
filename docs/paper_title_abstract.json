@@ -1,0 +1,15 @@
+{
+  "format": "IEEE",
+  "title": "Explainable 7-Day Crop Disease Severity Forecasting Using DINOv2 Segmentation and Real-Time Weather",
+  "abstract": "Most deep learning approaches for plant pathology perform static disease classification, lacking continuous severity grading, weather-conditioned spread forecasting, and calibrated uncertainty. This paper introduces a real-time framework that estimates foliar disease severity and forecasts 7-day spread from a single leaf photograph. A frozen DINOv2 backbone with a SegFormer FPN decoder isolates necrotic cores and spreading chlorotic borders to quantify baseline severity. This baseline is coupled with live 9 km weather forecasts—temperature, humidity, vapor pressure deficit, rainfall, and leaf wetness—through a semi-mechanistic epidemiological ODE fused with quantile residual learning and Mondrian Conformalized Quantile Regression (CQR), yielding 3-day and 7-day severity trajectories with 90% coverage guarantees. Finally, the system generates a 7-day spatial spread overlay alongside Attention Rollout and TreeSHAP explanations, achieving a severity MAE of 2.54%, RMSE of 3.61%, Lin's CCC of 0.929, pixel-level ROC-AUC of 0.982, and 91.0% conformal coverage.",
+  "abstract_word_count": 140,
+  "index_terms": [
+    "Conformalized quantile regression",
+    "Crop disease severity",
+    "DINOv2",
+    "Explainable AI (XAI)",
+    "Real-time weather forecasting",
+    "Semantic segmentation",
+    "Vision transformer"
+  ]
+}

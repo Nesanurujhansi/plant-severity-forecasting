@@ -1,0 +1,191 @@
+{
+  "benchmark_dataset": "Coffee Leaf Rust Golden Standard (N=100 images, strict 5-fold out-of-sample CV)",
+  "segmentation": {
+    "n_images": 100,
+    "macro_dice": 0.6351,
+    "macro_dice_std": 0.234,
+    "macro_iou": 0.5033,
+    "macro_pixel_accuracy": 0.9601,
+    "macro_precision": 0.6886,
+    "macro_recall": 0.7188,
+    "macro_specificity": 0.97,
+    "micro_global_dice": 0.7055,
+    "micro_global_iou": 0.545,
+    "micro_global_pixel_accuracy": 0.9557,
+    "pixel_roc_auc": 0.9815
+  },
+  "severity_regression_proposed": {
+    "mae_pct": 2.5398,
+    "rmse_pct": 3.6094,
+    "r2": 0.8668,
+    "pearson_r": 0.931,
+    "spearman_rho": 0.9287,
+    "lins_ccc": 0.9287,
+    "bland_altman_bias_pct": 0.0272,
+    "bland_altman_loa_lower_pct": -7.0826,
+    "bland_altman_loa_upper_pct": 7.137
+  },
+  "severity_regression_baselines": {
+    "ImageJ": {
+      "mae_pct": 4.2375,
+      "rmse_pct": 7.116,
+      "r2": 0.4822,
+      "pearson_r": 0.9126,
+      "spearman_rho": 0.9443,
+      "lins_ccc": 0.8258,
+      "bland_altman_bias_pct": 4.0461,
+      "bland_altman_loa_lower_pct": -7.485,
+      "bland_altman_loa_upper_pct": 15.5772
+    },
+    "Pliman": {
+      "mae_pct": 4.1108,
+      "rmse_pct": 7.185,
+      "r2": 0.4721,
+      "pearson_r": 0.8033,
+      "spearman_rho": 0.7953,
+      "lins_ccc": 0.7826,
+      "bland_altman_bias_pct": 1.7052,
+      "bland_altman_loa_lower_pct": -12.0441,
+      "bland_altman_loa_upper_pct": 15.4545
+    },
+    "SAM3": {
+      "mae_pct": 4.1429,
+      "rmse_pct": 9.3619,
+      "r2": 0.1037,
+      "pearson_r": 0.6239,
+      "spearman_rho": 0.7493,
+      "lins_ccc": 0.6167,
+      "bland_altman_bias_pct": -0.5027,
+      "bland_altman_loa_lower_pct": -18.9178,
+      "bland_altman_loa_upper_pct": 17.9124
+    },
+    "DeeplabV3": {
+      "mae_pct": 2.206,
+      "rmse_pct": 4.1243,
+      "r2": 0.8261,
+      "pearson_r": 0.9132,
+      "spearman_rho": 0.9531,
+      "lins_ccc": 0.9112,
+      "bland_altman_bias_pct": 0.607,
+      "bland_altman_loa_lower_pct": -7.4289,
+      "bland_altman_loa_upper_pct": 8.6429
+    }
+  },
+  "conformal_uncertainty": {
+    "target_coverage_pct": 90.0,
+    "empirical_coverage_pct": 91.0,
+    "mean_interval_width_pct": 19.9858
+  },
+  "ordinal_classification": {
+    "ordinal_accuracy": 0.69,
+    "ordinal_accuracy_pct": 69.0,
+    "quadratic_weighted_kappa": 0.8793,
+    "macro_f1": 0.7071,
+    "present_class_indices": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "present_class_labels": [
+      "<1%",
+      "1-5%",
+      "5-10%",
+      "10-25%",
+      "25-50%"
+    ],
+    "confusion_matrix": [
+      [
+        9,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        4,
+        16,
+        6,
+        0,
+        0
+      ],
+      [
+        0,
+        6,
+        15,
+        6,
+        0
+      ],
+      [
+        0,
+        1,
+        2,
+        21,
+        3
+      ],
+      [
+        0,
+        0,
+        0,
+        3,
+        8
+      ]
+    ]
+  },
+  "binary_detection_roc": {
+    "threshold_5pct": {
+      "threshold_pct": 5.0,
+      "positive_count": 65,
+      "negative_count": 35,
+      "accuracy": 0.87,
+      "precision": 0.9062,
+      "recall": 0.8923,
+      "f1_score": 0.8992,
+      "roc_auc": 0.9582,
+      "pr_auc": 0.9771
+    },
+    "threshold_10pct": {
+      "threshold_pct": 10.0,
+      "positive_count": 38,
+      "negative_count": 62,
+      "accuracy": 0.91,
+      "precision": 0.8537,
+      "recall": 0.9211,
+      "f1_score": 0.8861,
+      "roc_auc": 0.9599,
+      "pr_auc": 0.9495
+    }
+  },
+  "inference_latency": {
+    "device": "cpu",
+    "decoder_head_mean_latency_ms": 35.779,
+    "decoder_head_std_latency_ms": 41.675
+  },
+  "forecast_7day_real_nwp_eval": {
+    "n_real_nwp_locations": 12,
+    "total_forecast_evaluations": 96,
+    "physical_monotonicity_pass_rate_pct": 81.25,
+    "interval_bound_compliance_pct": 100.0,
+    "mean_latency_ms": 9.32,
+    "horizon_3_day": {
+      "mean_predicted_delta_pct": 3.505,
+      "mean_cqr_interval_width_pct": 2.664
+    },
+    "horizon_7_day": {
+      "mean_predicted_delta_pct": 6.772,
+      "mean_cqr_interval_width_pct": 3.5
+    }
+  },
+  "safety_stress_test": {
+    "total_stress_cases_tested": 10,
+    "detected_degraded_or_ood_cases": 10,
+    "safety_detection_rate_pct": 100.0
+  },
+  "generated_figures": [
+    "C:\\PlantDiseaseSeverity\\reports\\figures\\paper_roc_curves.png",
+    "C:\\PlantDiseaseSeverity\\reports\\figures\\paper_severity_parity_bland_altman.png",
+    "C:\\PlantDiseaseSeverity\\reports\\figures\\paper_baseline_comparison.png",
+    "C:\\PlantDiseaseSeverity\\reports\\figures\\paper_confusion_matrix.png"
+  ]
+}

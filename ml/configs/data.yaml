@@ -1,0 +1,39 @@
+# Data Pipeline Configuration for crop-prognosis
+
+nasa_power:
+  base_url: "https://power.larc.nasa.gov/api/temporal/daily/point"
+  community: "AG"
+  parameters:
+    - "T2M"
+    - "T2M_MAX"
+    - "T2M_MIN"
+    - "RH2M"
+    - "PRECTOTCORR"
+  eth_site:
+    name: "ETH Research Station Lindau-Eschikon, Switzerland"
+    latitude: 47.449
+    longitude: 8.682
+  cache_dir: "data/interim/weather_cache"
+  max_retries: 3
+  backoff_factor: 2.0
+
+datasets:
+  eth_wheat:
+    doi: "10.3929/ethz-b-000739194"
+    repo_url: "https://github.com/and-jonas/sympathique-wheat"
+    download_mode: "meta_and_processed" # "meta_and_processed" or "raw"
+  plantseg:
+    hf_repo: "Voxel51/PlantSeg-Test"
+  coffee_rust:
+    hf_repo: "MaryPazRB/Paper_CLR_CV"
+  leafnet_masks:
+    lesion_hf_repo: "LeafNet75/Leaf-Disease-Segmentation-masks"
+    wild_hf_repo: "LeafNet75/In_the_Wild_masks600"
+  plantvillage:
+    hf_repo: "mohanty/PlantVillage"
+
+provenance:
+  hash_algorithm: "dhash"
+  hash_size: 8
+  max_hamming_distance: 5
+  manifest_output: "data/processed/static_manifest.parquet"

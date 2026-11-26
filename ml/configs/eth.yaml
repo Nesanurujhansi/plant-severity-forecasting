@@ -1,0 +1,36 @@
+# ETH Wheat Processing Configuration
+
+paths:
+  raw_dir: "data/raw/eth_wheat"
+  processed_dir: "data/processed/eth"
+  reports_dir: "reports"
+
+severity:
+  symptom_classes:
+    background: 0
+    healthy: 1
+    chlorosis: 2
+    necrosis: 3
+    pustules: 4
+    ink_markers: 5
+  diseased_classes:
+    - 3 # Necrosis / Septoria
+    - 4 # Rust pustules
+  reference_frame: 1 # Pin denominator to first aligned frame
+
+pairs:
+  min_dt_days: 1.0
+  max_dt_days: 10.0
+  target_windows:
+    horizon_3d:
+      min: 2.0
+      max: 4.0
+    horizon_7d:
+      min: 5.0
+      max: 9.0
+  weighting: "reciprocal_sequence_length"
+
+splits:
+  n_folds: 5
+  seed: 42
+  calibration_fraction: 0.20

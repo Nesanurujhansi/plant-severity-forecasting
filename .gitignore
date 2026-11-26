@@ -1,0 +1,79 @@
+# Python byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Caches
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.cache/
+
+# Environments
+.venv/
+venv/
+ENV/
+env/
+env.bak/
+venv.bak/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+*-checkpoint.ipynb
+
+# Data directory contents (keep structure via .gitkeep)
+data/raw/*
+!data/raw/.gitkeep
+data/interim/*
+!data/interim/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+data/*
+!data/.gitkeep
+
+# Models directory contents (keep structure via .gitkeep)
+models/*
+!models/.gitkeep
+
+# Large binaries & checkpoints anywhere
+*.pt
+*.pth
+*.ckpt
+*.bin
+*.safetensors
+*.onnx
+*.zip
+*.tar.gz
+*.tgz
+*.7z
+*.parquet
+
+# IDE / OS specific
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+
+# Frontend build & dependencies
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+frontend/build/
+
+# Scratch & Debug artifacts
+scratch/
+crop_*.png
+side_by_side_comparison.png
+current_server_overlay.png
+pipeline_overlay.png
+test_image_current_comp.png
+test_output.pdf
+test_pdf.pdf
+*.log
+

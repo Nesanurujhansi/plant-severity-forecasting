@@ -1,0 +1,32 @@
+# Treatment Scenario Module Configuration (Phase 07)
+version: "1.0.0"
+
+identifiability:
+  primary_contrast: "FI2_vs_0F0I"
+  secondary_contrast: "FI2_vs_0FI1"
+  reference_contrast: "F0I_vs_0F0I"
+
+mixed_effects:
+  formula: "growth_rate_multiplier ~ is_treated + temp_mean + s0_severity"
+  random_intercepts:
+    - "cultivar"
+    - "plot_id"
+
+bootstrap:
+  n_resamples: 1000
+  confidence_level: 0.90
+  seed: 42
+  cluster_group: "plot_id"
+
+tarnet:
+  input_dim: 16
+  hidden_dim: 64
+  dropout_rate: 0.1
+  n_mc_samples: 30
+
+simulation:
+  default_horizon_days: 7.0
+  disclaimer: >
+    Estimated under the conditions of a Swiss wheat field trial or multi-crop research baseline;
+    not a spray recommendation. Does NOT prescribe pesticide names, dosages, or application timing.
+    Consult a certified local agronomist before taking crop protection actions.

@@ -1,0 +1,32 @@
+# Severity Module Configuration
+
+head:
+  input_dim: 384             # Patch token dimension (384 for dinov2-small, 768 for dinov2-base)
+  reduced_dim: 64           # 1x1 conv channel reduction
+  target_stride: 4          # Output resolution stride relative to input image (e.g. 448x448 -> 112x112)
+  lesion_num_classes: 1     # Binary lesion logit map
+  leaf_num_classes: 1       # Binary leaf logit map
+
+loss:
+  bce_weight: 1.0           # Binary cross-entropy loss weight
+  dice_weight: 1.0          # Dice loss weight
+  lesion_pos_weight: 5.0    # Positive class weighting for lesion pixels (rare target)
+  leaf_pos_weight: 1.0      # Positive class weighting for leaf pixels
+
+severity:
+  bins: [0.0, 0.01, 0.05, 0.10, 0.25, 0.50, 1.0] # Bins: <1%, 1-5%, 5-10%, 10-25%, 25-50%, >50%
+  bin_labels: ["<1%", "1-5%", "5-10%", "10-25%", "25-50%", ">50%"]
+  prob_threshold: 0.5       # Hard mask binarization threshold
+
+conformal:
+  alpha: 0.10               # 90% prediction intervals (1 - alpha)
+  num_bins: 5               # Mondrian split severity calibration bins
+  min_bin_samples: 10       # Minimum calibration samples before bin merging
+
+training:
+  epochs: 20
+  lr: 0.001
+  weight_decay: 0.0001
+  batch_size: 16
+  early_stopping_patience: 5
+  seed: 42

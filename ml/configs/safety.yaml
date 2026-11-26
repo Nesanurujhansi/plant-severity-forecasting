@@ -1,0 +1,58 @@
+# Safety Layer Configuration for crop-prognosis
+
+version: "1.0.0"
+calibration_date: "2026-09-22"
+
+quality_thresholds:
+  min_width: 224
+  min_height: 224
+  blur_laplacian_min: 100.0          # Laplacian variance threshold
+  blur_laplacian_norm_min: 0.15      # Resolution-normalized Laplacian threshold
+  min_brightness: 40.0               # Mean pixel intensity (0-255)
+  max_brightness: 220.0              # Mean pixel intensity (0-255)
+  max_overexposure_fraction: 0.20    # Fraction of pixels > 245
+  max_underexposure_fraction: 0.25   # Fraction of pixels < 10
+  min_leaf_coverage_fraction: 0.10   # Fraction of image covered by leaf mask
+  max_leaf_blob_count: 8             # Max distinct disconnected leaf regions
+  min_lesion_pixels: 5               # Minimum lesion pixels for visible check
+
+ood_thresholds:
+  feature_dim: 384                   # DINOv2 small embedding dimension
+  temperature: 1.0                   # Temperature scaling for Free Energy
+  energy_borderline_percentile: 95.0 # Free energy 95th percentile
+  energy_ood_percentile: 99.0         # Free energy 99th percentile
+  free_energy_threshold: 8.5         # Energy cutoff for OOD rejection
+  mahalanobis_p95: 18.5              # 95th percentile Mahalanobis distance
+  mahalanobis_p99: 28.2              # 99th percentile Mahalanobis distance
+  knn_k: 5
+  knn_dist_p95: 1.25
+  knn_dist_p99: 2.10
+
+range_thresholds:
+  temp_c_min: -5.0
+  temp_c_max: 45.0
+  rh_pct_min: 10.0
+  rh_pct_max: 100.0
+  vpd_kpa_min: 0.0
+  vpd_kpa_max: 6.0
+  horizon_days_min: 0.5
+  horizon_days_max: 14.0
+  supported_crops:
+    - "Wheat"
+    - "Rice"
+    - "Tomato"
+    - "Corn"
+    - "Sugarcane"
+    - "Cotton"
+  validated_progression_crops:
+    - "Wheat"
+    - "Rice"
+    - "Tomato"
+    - "Corn"
+    - "Sugarcane"
+    - "Cotton"
+
+policy_thresholds:
+  max_conformal_interval_width: 35.0  # Max acceptable 90% CI width (% points)
+  high_confidence_min_quality_score: 0.90
+  medium_confidence_min_quality_score: 0.70

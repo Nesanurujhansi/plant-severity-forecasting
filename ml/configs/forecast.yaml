@@ -1,0 +1,106 @@
+# Configuration for Phase 06 Epidemiological Progression Forecasting Module
+
+features:
+  core:
+    - severity_i
+    - dt_days
+    - n_lesions_i
+    - mean_lesion_area_i
+    - t_mean_past3
+    - t_mean_past7
+    - t_mean_interval
+    - t_max_min_interval
+    - rh_mean_past3
+    - rh_mean_past7
+    - rh_mean_interval
+    - precip_total_past3
+    - precip_total_past7
+    - precip_total_interval
+    - crop_stage
+    - cultivar_group
+  extended:
+    - severity_i
+    - dt_days
+    - n_lesions_i
+    - mean_lesion_area_i
+    - t_mean_past3
+    - t_mean_past7
+    - t_mean_interval
+    - t_max_min_interval
+    - rh_mean_past3
+    - rh_mean_past7
+    - rh_mean_interval
+    - precip_total_past3
+    - precip_total_past7
+    - precip_total_interval
+    - crop_stage
+    - cultivar_group
+    - cultivar_trait_score
+    - rh_std_interval
+    - batch_id
+    - year_id
+    - treatment_code
+
+growth_curve:
+  r0_initial: 0.12
+  r0_bounds: [0.001, 0.50]
+  t_opt_initial: 21.0
+  t_opt_bounds: [10.0, 32.0]
+  t_sigma_initial: 6.0
+  t_sigma_bounds: [2.0, 15.0]
+  k_h_initial: 1.5
+  k_h_bounds: [0.1, 5.0]
+  rh_50_initial: 70.0
+  rh_50_bounds: [40.0, 95.0]
+  K_initial: 0.95
+  K_bounds: [0.50, 1.00]
+  seed_floor: 0.00001  # 1e-5
+  dt_step_days: 0.25   # 6-hour Euler step
+
+lightgbm:
+  n_estimators: 300
+  learning_rate: 0.03
+  num_leaves: 15
+  max_depth: 4
+  min_child_samples: 20
+  subsample: 0.8
+  colsample_bytree: 0.8
+  early_stopping_rounds: 30
+  random_state: 42
+
+cqr:
+  alpha: 0.10
+  quantiles:
+    low: 0.05
+    med: 0.50
+    high: 0.95
+
+pinn_residual:
+  hidden_dim: 64
+  n_steps: 10
+  learning_rate: 0.001
+  batch_size: 32
+  epochs: 30
+  weight_decay: 0.0001
+  mono_penalty_weight: 0.1
+
+evaluation:
+  horizons:
+    three_day:
+      min_dt: 2.0
+      max_dt: 4.0
+    seven_day:
+      min_dt: 5.0
+      max_dt: 9.0
+
+export:
+  export_dir: "models/forecast"
+  growth_params_file: "growth_params.json"
+  lgbm_residual_file: "lgbm_residual.txt"
+  lgbm_q_low_file: "lgbm_q_low.txt"
+  lgbm_q_med_file: "lgbm_q_med.txt"
+  lgbm_q_high_file: "lgbm_q_high.txt"
+  pinn_residual_file: "pinn_residual.safetensors"
+  feature_schema_file: "feature_schema.json"
+  cqr_calibration_file: "cqr_calibration.json"
+  forecast_config_file: "forecast_config.json"

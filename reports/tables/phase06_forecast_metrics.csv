@@ -1,0 +1,3 @@
+horizon,model,mae_pct,rmse_pct,coverage_90,skill_score
+3_day_window,CQR_Hybrid,2.15,3.42,91.2,0.48
+7_day_window,CQR_Hybrid,4.82,6.95,89.8,0.52

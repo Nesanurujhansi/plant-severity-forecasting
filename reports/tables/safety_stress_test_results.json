@@ -1,0 +1,97 @@
+{
+  "total_stress_cases_tested": 10,
+  "detected_degraded_or_ood_cases": 10,
+  "safety_detection_rate_pct": 100.0,
+  "test_case_results": [
+    {
+      "test_case": "clean_baseline",
+      "quality_passed": true,
+      "quality_score": 1.0,
+      "ood_status": "OUT_OF_DISTRIBUTION",
+      "confidence_tier": "LOW",
+      "should_abstain": true,
+      "user_action": "Please upload a clear photo of a crop leaf."
+    },
+    {
+      "test_case": "mild_blur_sigma1",
+      "quality_passed": false,
+      "quality_score": 0.75,
+      "ood_status": "OUT_OF_DISTRIBUTION",
+      "confidence_tier": "LOW",
+      "should_abstain": true,
+      "user_action": "Please upload a clear photo of a crop leaf."
+    },
+    {
+      "test_case": "heavy_blur_sigma5",
+      "quality_passed": false,
+      "quality_score": 0.75,
+      "ood_status": "OUT_OF_DISTRIBUTION",
+      "confidence_tier": "LOW",
+      "should_abstain": true,
+      "user_action": "Please upload a clear photo of a crop leaf."
+    },
+    {
+      "test_case": "darkened_factor0.3",
+      "quality_passed": false,
+      "quality_score": 0.5,
+      "ood_status": "OUT_OF_DISTRIBUTION",
+      "confidence_tier": "LOW",
+      "should_abstain": true,
+      "user_action": "Please upload a clear photo of a crop leaf."
+    },
+    {
+      "test_case": "overexposed_factor1.8",
+      "quality_passed": true,
+      "quality_score": 1.0,
+      "ood_status": "OUT_OF_DISTRIBUTION",
+      "confidence_tier": "LOW",
+      "should_abstain": true,
+      "user_action": "Please upload a clear photo of a crop leaf."
+    },
+    {
+      "test_case": "downscaled_64x64",
+      "quality_passed": false,
+      "quality_score": 0.75,
+      "ood_status": "OUT_OF_DISTRIBUTION",
+      "confidence_tier": "LOW",
+      "should_abstain": true,
+      "user_action": "Please upload a clear photo of a crop leaf."
+    },
+    {
+      "test_case": "random_gaussian_noise",
+      "quality_passed": true,
+      "quality_score": 1.0,
+      "ood_status": "OUT_OF_DISTRIBUTION",
+      "confidence_tier": "LOW",
+      "should_abstain": true,
+      "user_action": "Please upload a clear photo of a crop leaf."
+    },
+    {
+      "test_case": "solid_black",
+      "quality_passed": false,
+      "quality_score": 0.5,
+      "ood_status": "OUT_OF_DISTRIBUTION",
+      "confidence_tier": "LOW",
+      "should_abstain": true,
+      "user_action": "Please upload a clear photo of a crop leaf."
+    },
+    {
+      "test_case": "solid_white",
+      "quality_passed": false,
+      "quality_score": 0.5,
+      "ood_status": "OUT_OF_DISTRIBUTION",
+      "confidence_tier": "LOW",
+      "should_abstain": true,
+      "user_action": "Please upload a clear photo of a crop leaf."
+    },
+    {
+      "test_case": "checkerboard",
+      "quality_passed": false,
+      "quality_score": 0.75,
+      "ood_status": "OUT_OF_DISTRIBUTION",
+      "confidence_tier": "LOW",
+      "should_abstain": true,
+      "user_action": "Please upload a clear photo of a crop leaf."
+    }
+  ]
+}

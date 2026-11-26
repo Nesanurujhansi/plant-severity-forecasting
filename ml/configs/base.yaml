@@ -1,0 +1,29 @@
+# Base Configuration for crop-prognosis
+
+seed: 42
+
+# Ordinal severity bins: <1%, 1-5%, 5-10%, 10-25%, 25-50%, >50%
+severity_bins:
+  - 0.00
+  - 0.01
+  - 0.05
+  - 0.10
+  - 0.25
+  - 0.50
+  - 1.00
+
+conformal_alpha: 0.10
+
+forecast_horizons:
+  - 3
+  - 7
+
+# Vision backbone repository ID (to be verified and pinned in Phase 1)
+backbone_id: ""
+
+image_sizes:
+  - 448
+  - 672
+  - 896
+
+data_root_override: null

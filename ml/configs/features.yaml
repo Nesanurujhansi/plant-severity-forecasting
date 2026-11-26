@@ -1,0 +1,29 @@
+# Feature Extraction & Caching Configuration
+
+backbone:
+  small_id: "facebook/dinov2-small"
+  base_id: "facebook/dinov2-base"
+  revision: "main"  # Pinned revision tag/commit
+  patch_size: 14
+  small_embed_dim: 384
+  base_embed_dim: 768
+  default_backbone: "small" # "small" or "base"
+
+extraction:
+  resolutions: [448, 672, 896]
+  default_resolution: 448
+  batch_size: 16
+  num_workers: 2
+  use_amp: true # Mixed precision float16
+  shard_size: 500 # Number of images per safetensors shard file
+  image_mean: [0.485, 0.456, 0.406]
+  image_std: [0.229, 0.224, 0.225]
+
+eth_macro:
+  mode: "downscaled_crop" # "downscaled_crop" or "tiled"
+  tile_size: 448
+  tile_overlap: 56
+
+ood:
+  regularization_gamma: 0.01 # Shrinkage covariance factor
+  percentiles: [95.0, 99.0]

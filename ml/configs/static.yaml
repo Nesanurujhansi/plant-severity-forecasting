@@ -1,0 +1,32 @@
+# Static In-the-Wild Dataset Processing Configuration
+
+paths:
+  raw_dir: "data/raw"
+  processed_dir: "data/processed/static"
+  reports_dir: "reports"
+  interim_dir: "data/interim"
+
+sam2:
+  model_id: "facebook/sam2.1-hiera-small" # Pinned HuggingFace backbone ID for SAM 2
+  points_per_side: 32
+  pred_iou_thresh: 0.80
+  stability_score_thresh: 0.85
+  min_mask_region_area: 100
+
+severity_bins:
+  bin_1: [0.0, 0.01]   # < 1%
+  bin_2: [0.01, 0.05]  # 1 - 5%
+  bin_3: [0.05, 0.10]  # 5 - 10%
+  bin_4: [0.10, 0.25]  # 10 - 25%
+  bin_5: [0.25, 0.50]  # 25 - 50%
+  bin_6: [0.50, 1.00]  # > 50%
+
+near_duplicates:
+  hamming_distance_threshold: 10
+
+splits:
+  seed: 42
+  train_fraction: 0.65
+  calibration_fraction: 0.15
+  val_fraction: 0.10
+  test_fraction: 0.10
